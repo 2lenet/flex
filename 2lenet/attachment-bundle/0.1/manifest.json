@@ -1,0 +1,9 @@
+{
+    "bundles": {
+        "2lenet\\AttachmentBundle\\2lenetAttachmentBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "aliases": ["lle-attachment"]
+}
