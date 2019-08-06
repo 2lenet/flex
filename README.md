@@ -29,18 +29,9 @@ add endpoint in your project composer.json
 ```
 "extra": {
         "symfony": {
-            "allow-contrib": true,
-            "endpoint": "http://flex.2le.net"
+            "endpoint": "https://flex.2le.net"
         }
     }
-```
-
-And add this if flex.2le.net is not HTTPS
-
-```
-"config": {
-        "secure-http": false
-    },
 ```
 
 It's work (compose require attachment)
@@ -53,4 +44,4 @@ It's work (compose require attachment)
 
 Just change this repository the first methode is OK
 
-For the flex.2le.net run update.sh on Japet 
+For the flex.2le.net run update.sh on Japet after change this repo
