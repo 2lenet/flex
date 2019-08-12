@@ -1,0 +1,9 @@
+{
+    "bundles": {
+        "Lle\\PdfGeneratorBundle\\PdfGeneratorBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "aliases": ["lle-pdf", "pdfgen", "pdfgenerator"]
+}
