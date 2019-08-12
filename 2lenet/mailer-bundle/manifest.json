@@ -1,9 +1,0 @@
-{
-    "bundles": {
-        "Lle\\MailerBundle\\LleMailerBundle": ["all"]
-    },
-    "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/"
-    },
-    "aliases": ["lle-mailer", "lle-mail"]
-}

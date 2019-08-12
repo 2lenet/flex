@@ -1,5 +1,0 @@
-lle_mailer:
-  template_class: "App\\Entity\\MailTemplate"
-  mail_class: "App\\Entity\\Mail"
-  destinataire_class: "App\\Entity\\MailDestinataire"
-  check_mx: false
