@@ -1,0 +1,9 @@
+{
+    "bundles": {
+        "Tkuska\\DashboardBundle\\TkuskaDashboardBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "aliases": ["lle-dash", "lle-dashboard", "dashboard"]
+}

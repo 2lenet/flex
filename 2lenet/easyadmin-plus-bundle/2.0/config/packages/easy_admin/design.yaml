@@ -1,0 +1,22 @@
+easy_admin:
+    translation_domain: messages
+    formats:
+        datetime: 'd/m/Y à H\hi'
+        date: d/m/Y
+        time: 'H\hi e'
+    site_name: 'GéoStages'
+    design:
+        templates:
+            layout: 'easy_admin/layout.html.twig'
+        brand_color: '#009DDD'
+        form_theme: ['form/fields.html.twig', '@VichUploader/Form/fields.html.twig']
+        assets:
+            css:
+                - 'build/css/admin.css'
+                - '/bundles/lleeasyadminplus/css/lle-easyadmin-plus.css'
+            js:
+                - 'build/js/admin.js'
+                - 'js/jsa.js'
+            favicon:
+                path: 'logo.png'
+

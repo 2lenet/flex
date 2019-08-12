@@ -1,0 +1,63 @@
+easy_admin:
+    design:
+        menu:
+            -
+                label: menu.accueil
+                route: dashboard
+                icon: home
+                default: true
+            -
+                label: menu.etablissement
+                icon: university
+                children:
+                    - { label: menu.etablissement, entity: Etablissement, icon: university }
+                    - { label: menu.personnel, entity: Personnel, icon: address-card }
+                    - { label: menu.classe, entity: Classe, icon: users }
+                    - { label: menu.groupeeleve, entity: Groupeeleve, icon: users }
+                    - { label: menu.eleve, entity: Eleve, icon: user }
+                    - { label: menu.Responsable, entity: Responsable, icon: male }
+                    - { label: menu.ResponsableEleve, entity: Responsableeleve, icon: male }
+            -
+                label: menu.entreprise
+                icon: building
+                children:
+                    - { label: menu.entreprise, entity: Entreprise, icon: building-o }
+                    - { label: menu.tag, entity: Tagentreprise, icon: tags }
+                    - { label: menu.contact, entity: Contact, icon: list-alt }
+                    - { label: menu.fonctioncontact, entity: Fonctioncontact, icon: list-alt }
+                    - { label: menu.groupeEntreprise, entity: Groupeentreprise, icon: list }
+                    - { label: menu.Repertoire, entity: Repertoire, icon: address-book }
+                    - { label: menu.eleveentreprise, entity: Eleveentreprise, icon: users }
+            -
+                label: menu.stages
+                icon: briefcase
+                children:
+                    - { entity: Periodestage, label: menu.periodestage, icon: calendar }
+                    - { entity: Conventionstage, label: menu.conventionstage, icon: file }
+                    - { entity: Ordredemissionconvention, label: menu.ordreDeMission, icon: file }
+                    - { entity: Conventionstageentreprise, label: menu.conventionstage, icon: file }
+                    - { entity: Conventionstageprofesseur, label: menu.conventionstage, icon: file }
+                    - { entity: Typestage, label: menu.typestage, icon: briefcase }
+                    - { entity: Panier, label: menu.panier, icon: shopping-basket }
+            -
+                label: menu.parameters
+                icon: cogs
+                children:
+                    - { label: menu.pays, entity: Pays, icon: globe }
+                    - { label: menu.help, entity: Help, icon: question-circle }
+                    - { label: menu.civilite, entity: Civilite, icon: venus-mars }
+                    - { label: menu.fonction, entity: Fonction, icon: user-circle-o }
+                    - { label: menu.discipline, entity: Discipline, icon: user-circle-o }
+                    - { label: menu.mef, entity: Mef, icon: cogs }
+                    - { label: menu.lienParente, entity: Lienparente, icon: user-plus }
+                    - { label: menu.niveauResponsabilite, entity: Niveauresponsabilite, icon: user-circle }
+                    - { entity: Template, label: menu.template, icon: envelope }
+                    - { entity: Pdfmodel, label: menu.pdfmodele, icon: file-pdf-o }
+                    - { entity: Meftag, label: menu.meftag, icon: tags }
+                    - { label: menu.editContactProfil, route: app_admin_contact_editcontactprofile, icon: user, role: ROLE_CONTACT_EDIT_PROFIL }
+            -
+                label: menu.droits
+                icon: gear
+                children:
+                    - { label: menu.user, entity: User, icon: user-circle-o }
+                    - { url: /admin/credential, label: menu.droit, role: ROLE_CREDENTIAL }

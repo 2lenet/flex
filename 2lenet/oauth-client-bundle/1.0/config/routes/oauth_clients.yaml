@@ -1,0 +1,3 @@
+oauth_client_bundle:
+    resource: "@OAuthClientBundle/Resources/config/routes.yaml"
+    prefix:   /admin

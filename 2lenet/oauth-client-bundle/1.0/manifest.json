@@ -1,0 +1,17 @@
+{
+    "bundles": {
+        "Lle\\OAuthClientBundle\\OAuthClientBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "CLIENT_ID": "",
+        "CLIENT_SECRET": "",
+        "DOMAIN": "",
+        "OAUTHAPI_USERNAME": "",
+        "OAUTHAPI_PASSWORD": ""
+
+    },
+    "aliases": ["lle-oauth"]
+}

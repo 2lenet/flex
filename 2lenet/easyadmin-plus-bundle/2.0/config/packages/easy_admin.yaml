@@ -1,0 +1,7 @@
+easy_admin:
+    design:
+        assets:
+            favicon: /images/favicon-backend-32x32.png
+imports:
+    - resource: easy_admin/
+    #- resource: easy_admin/entities/User.yaml
