@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "Lle\\CredentialBundle\\lleCredentialBundle": ["all"]
+        "Lle\\CredentialBundle\\LleCredentialBundle": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"

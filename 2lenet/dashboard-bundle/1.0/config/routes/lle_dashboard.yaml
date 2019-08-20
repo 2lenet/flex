@@ -2,3 +2,7 @@ dashboard:
   path: /admin/dashboard
   defaults:
     _controller: Tkuska\DashboardBundle\Controller\DashboardController::dashboardAction
+
+dashboard_widgets:
+  resource: "@TkuskaDashboardBundle/Resources/config/routes.yaml"
+  prefix: /admin
