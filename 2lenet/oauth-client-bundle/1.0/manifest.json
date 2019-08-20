@@ -13,5 +13,5 @@
         "OAUTHAPI_PASSWORD": ""
 
     },
-    "aliases": ["lle-oauth"]
+    "aliases": ["lle-oauth", "2le-oauth"]
 }
