@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "Lle\\PdfGeneratorBundle\\PdfGeneratorBundle": ["all"]
+        "Lle\\PdfGeneratorBundle\\LlePdfGeneratorBundle": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
