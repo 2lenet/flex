@@ -11,6 +11,6 @@
     "_links": {
         "repository": "github.com/2lenet/flex",
         "origin_template": "{package}:{version}@github.com/2lenet/flex:master",
-        "recipe_template": "https://api.github.com/repos/2lenet/flex/contents/{package_dotted}.{version}.json"
+        "recipe_template": "https://raw.githubusercontent.com/2lenet/flex/master/{package_dotted}.{version}.json"
     }
 }
