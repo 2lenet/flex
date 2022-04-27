@@ -1,3 +1,0 @@
-easy_admin_plus:
-  resource: "@LleEasyAdminPlusBundle/Resources/config/routing.yaml"
-  prefix: /admin/

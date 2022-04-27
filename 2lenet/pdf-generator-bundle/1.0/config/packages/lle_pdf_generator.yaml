@@ -1,2 +1,0 @@
-lle_pdf_generator:
-  class: "App\\Entity\\PdfModel"

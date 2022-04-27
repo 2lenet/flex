@@ -1,4 +1,0 @@
-lle_attachment:
-    directory: data/attachment
-    show_list: false
-    need_confirm_remove: true

@@ -1,9 +1,0 @@
-{
-    "bundles": {
-        "Lle\\CredentialBundle\\LleCredentialBundle": ["all"]
-    },
-    "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/"
-    },
-    "aliases": ["lle-credential", "cred", "credential"]
-}

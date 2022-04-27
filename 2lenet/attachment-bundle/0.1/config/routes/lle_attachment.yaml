@@ -1,2 +1,0 @@
-lle_attachment:
-    resource: "@LleAttachmentBundle/Resources/config/routing/routes.yaml"

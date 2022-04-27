@@ -1,9 +1,0 @@
-{
-    "bundles": {
-        "Lle\\HelpBundle\\LleHelpBundle": ["all"]
-    },
-    "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/"
-    },
-    "aliases": ["lle-help"]
-}

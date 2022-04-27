@@ -1,3 +1,0 @@
-lle_pdf_generator:
-    resource: "@LlePdfGeneratorBundle/Resources/routing/routes.yaml"
-    prefix: /admin

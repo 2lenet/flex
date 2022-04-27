@@ -1,0 +1,33 @@
+{
+    "manifests": {
+        "2lenet/Dashboard2Bundle": {
+            "manifest": {
+                "bundles": {
+                    "Lle\\DashboardBundle\\LleDashboardBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  * Dashboard install:",
+                    "    1. Create your first Widget with the maker;"
+                ]
+            },
+            "files": {
+                "config/routes/dashboard.yaml": {
+                    "contents": [
+                        "dashboard:",
+                        "    resource: @LleDashboardBundle/Resources/config/routes.yaml",
+                        "home:",
+                        "    path: /",
+                        "    controller: Lle\\DashboardBundle\\Controller\\DashboardController::dashboardAction"
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "e9f8613c4c12479961008420a58b38e9a634bc601"
+        }
+    }
+}
