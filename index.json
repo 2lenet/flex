@@ -1,9 +1,7 @@
 {
     "recipes": {
         "2lenet/dashboard2-bundle": [
-            "2.1",
-            "2.2",
-            "2.2.2"
+            "2.0"
         ]
     },
     "branch": "master",
