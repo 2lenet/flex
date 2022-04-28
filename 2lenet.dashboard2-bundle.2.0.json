@@ -22,7 +22,8 @@
                         "    resource: @LleDashboardBundle/Resources/config/routes.yaml",
                         "home:",
                         "    path: /",
-                        "    controller: Lle\\DashboardBundle\\Controller\\DashboardController::dashboardAction"
+                        "    controller: Lle\\DashboardBundle\\Controller\\DashboardController::dashboardAction",
+                        ""
                     ],
                     "executable": false
                 }
