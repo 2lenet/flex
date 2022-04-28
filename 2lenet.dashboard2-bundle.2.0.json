@@ -1,6 +1,6 @@
 {
     "manifests": {
-        "2lenet/Dashboard2Bundle": {
+        "2lenet/dashboard2-bundle": {
             "manifest": {
                 "bundles": {
                     "Lle\\DashboardBundle\\LleDashboardBundle": [
