@@ -10,7 +10,8 @@
         "copy-from-recipe": {
           "config/": "%CONFIG_DIR%/",
           "assets/": "assets/",
-          "templates/": "templates/"
+          "templates/": "templates/",
+          "src/": "%SRC_DIR%/"
         },
         "post-install-output": [
           "  * Crudit install:",
@@ -44,6 +45,35 @@
             "    {{ parent() }}",
             "    {{ encore_entry_script_tags('app') }}",
             "{% endblock %}",
+            ""
+          ],
+          "executable": false
+        },
+        "src/Crudit/CrudMenu/AppMenuProvider.php": {
+          "contents": [
+            "<?php",
+            "",
+            "declare(strict_types=1);",
+            "",
+            "namespace App\\Crudit\\CrudMenu;",
+            "",
+            "use Lle\\CruditBundle\\Contracts\\MenuProviderInterface;",
+            "use Lle\\CruditBundle\\Dto\\Layout\\LinkElement;",
+            "use Lle\\CruditBundle\\Dto\\Path;",
+
+            "class AppMenuProvider implements MenuProviderInterface",
+            "{",
+            "  public function getMenuEntry(): array",
+            "  {",
+            "     $items = [",
+            "       LinkElement::new(",
+            "        \"menu.dashboard\",",
+            "        Path::new(\"home\")",
+            "      )",
+            "     ];",
+            "     return $items;",
+            "  }",
+            "}",
             ""
           ],
           "executable": false
