@@ -9,8 +9,8 @@
         },
         "copy-from-recipe": {
           "config/": "%CONFIG_DIR%/",
-          "assets/": "%ASSETS_DIR%/",
-          "templates/": "%TEMPLATE_DIR%/"
+          "assets/": "assets/",
+          "templates/": "templates/"
         },
         "post-install-output": [
           "  * Crudit install:",
