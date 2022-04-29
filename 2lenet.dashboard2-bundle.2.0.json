@@ -19,7 +19,7 @@
                 "config/routes/dashboard.yaml": {
                     "contents": [
                         "dashboard:",
-                        "    resource: @LleDashboardBundle/Resources/config/routes.yaml",
+                        "    resource: \"@LleDashboardBundle/Resources/config/routes.yaml\"",
                         "home:",
                         "    path: /",
                         "    controller: Lle\\DashboardBundle\\Controller\\DashboardController::dashboardAction",
