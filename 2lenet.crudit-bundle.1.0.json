@@ -1,0 +1,55 @@
+{
+  "manifests": {
+    "2lenet/crudit-bundle": {
+      "manifest": {
+        "bundles": {
+          "Lle\\CruditBundle\\LleCruditBundle": [
+            "all"
+          ]
+        },
+        "copy-from-recipe": {
+          "config/": "%CONFIG_DIR%/",
+          "assets/": "%ASSETS_DIR%/",
+          "templates/": "%TEMPLATE_DIR%/"
+        },
+        "post-install-output": [
+          "  * Crudit install:",
+          "    1. Create your first admin with the maker;"
+        ]
+      },
+      "files": {
+        "assets/js/app.js": {
+          "contents": [
+            "import '../styles/app.scss';",
+            ""
+          ],
+          "executable": false
+        },
+        "assets/styles/app.scss": {
+          "contents": [
+            "@import '../../vendor/2lenet/crudit-bundle/assets/sb-admin/css/app.scss';",
+            ""
+          ],
+          "executable": false
+        },
+        "templates/base.html.twig": {
+          "contents": [
+            "{% extends '@LleCrudit/layout/sb_admin/layout.html.twig' %}",
+            "",
+            "{% block stylesheets %}",
+            "    {{ encore_entry_link_tags('app') }}",
+            "{% endblock %}",
+            "",
+            "{% block javascripts %}",
+            "    {{ parent() }}",
+            "    {{ encore_entry_script_tags('app') }}",
+            "{% endblock %}",
+            ""
+          ],
+          "executable": false
+        }
+      },
+      "ref": "e9f8613c4c12479961008420a58b38e9a634bc601"
+    }
+  }
+}
