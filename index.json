@@ -8,6 +8,9 @@
         ],
         "2lenet/credential-bundle": [
             "1.0"
+        ],
+        "2lenet/hermes-bundle": [
+            "1.4"
         ]
     },
     "branch": "master",
