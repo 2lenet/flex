@@ -1,0 +1,70 @@
+{
+    "manifests": {
+        "2lenet/hermes-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Lle\\CruditBundle\\LleHermesBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  * Hermes install:",
+                    "    1. Configure variables in .env file !"
+                ]
+            },
+            "files": {
+                "config/packages/lle_hermes.yaml": {
+                    "content": [
+                        "lle_hermes:",
+                        "    root_dir: '%kernel.project_dir%'",
+                        "",
+                        "    app_secret: '%env(APP_SECRET)%'",
+                        "    app_domain: '%env(LLE_HERMES_APP_DOMAIN)%'",
+                        "    bounce_host: '%env(LLE_HERMES_BOUNCE_HOST)%'",
+                        "    bounce_email: '%env(LLE_HERMES_BOUNCE_EMAIL)%'",
+                        "    bounce_pass: '%env(LLE_HERMES_BOUNCE_PASSWORD)%'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/security.yaml": {
+                    "content": [
+                        "security:",
+                        "    access_control:",
+                        "        - { path: ^/hermes/mailOpened, roles: PUBLIC_ACCESS }",
+                        "        - { path: ^/hermes/statistics, roles: PUBLIC_ACCESS }",
+                        "        - { path: ^/hermes/unsubscribe, roles: PUBLIC_ACCESS }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes.yaml": {
+                    "contents": [
+                        "hermes:",
+                        "    resource: \"@LleHermesBundle/Resources/config/routes.xml\"",
+                        "    prefix: /hermes",
+                        ""
+                    ],
+                    "executable": false
+                },
+                ".env": {
+                    "content": [
+                        "",
+                        "###> 2lenet/hermes-bundle",
+                        "LLE_HERMES_APP_DOMAIN: domain",
+                        "LLE_HERMES_BOUNCE_HOST=mail.server.com",
+                        "LLE_HERMES_BOUNCE_EMAIL=bounce@email.com",
+                        "LLE_HERMES_BOUNCE_PASSWORD=pass",
+                        "###< 2lenet/hermes-bundle",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "7d300da1c40c68fb8185a84dd33d04011bda4ea0"
+        }
+    }
+}
