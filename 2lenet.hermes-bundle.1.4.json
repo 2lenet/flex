@@ -17,7 +17,7 @@
             },
             "files": {
                 "config/packages/lle_hermes.yaml": {
-                    "content": [
+                    "contents": [
                         "lle_hermes:",
                         "    root_dir: '%kernel.project_dir%'",
                         "",
@@ -31,7 +31,7 @@
                     "executable": false
                 },
                 "config/packages/security.yaml": {
-                    "content": [
+                    "contents": [
                         "security:",
                         "    access_control:",
                         "        - { path: ^/hermes/mailOpened, roles: PUBLIC_ACCESS }",
@@ -51,7 +51,7 @@
                     "executable": false
                 },
                 ".env": {
-                    "content": [
+                    "contents": [
                         "",
                         "###> 2lenet/hermes-bundle",
                         "LLE_HERMES_APP_DOMAIN: domain",
