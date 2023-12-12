@@ -3,7 +3,7 @@
         "2lenet/hermes-bundle": {
             "manifest": {
                 "bundles": {
-                    "Lle\\CruditBundle\\LleHermesBundle": [
+                    "Lle\\HermesBundle\\LleHermesBundle": [
                         "all"
                     ]
                 },
