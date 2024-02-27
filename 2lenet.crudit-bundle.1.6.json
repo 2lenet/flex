@@ -1,0 +1,96 @@
+{
+    "manifests": {
+        "2lenet/crudit-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Lle\\CruditBundle\\LleCruditBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "assets/": "assets/",
+                    "templates/": "templates/",
+                    "src/": "%SRC_DIR%/"
+                },
+                "post-install-output": [
+                    "  * Crudit install:",
+                    "    1. Create your first admin with the maker;"
+                ]
+            },
+            "files": {
+                "config/packages/lle_crudit.yaml": {
+                    "contents": [
+                        "lle_crudit:",
+                        "    default_currency_alignment: 'right'",
+                        "    default_integer_alignment: 'right'",
+                        "    default_number_alignment: 'right'",
+                        "    hide_if_disabled: false",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "assets/js/app.js": {
+                    "contents": [
+                        "import '../styles/app.scss';",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "assets/styles/app.scss": {
+                    "contents": [
+                        "@import '../../vendor/2lenet/crudit-bundle/assets/sb-admin/css/app.scss';",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "templates/base.html.twig": {
+                    "contents": [
+                        "{% extends '@LleCrudit/layout/sb_admin/layout.html.twig' %}",
+                        "",
+                        "{% block stylesheets %}",
+                        "    {{ encore_entry_link_tags('app') }}",
+                        "{% endblock %}",
+                        "",
+                        "{% block javascripts %}",
+                        "    {{ parent() }}",
+                        "    {{ encore_entry_script_tags('app') }}",
+                        "{% endblock %}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Crudit/CrudMenu/AppMenuProvider.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "namespace App\\Crudit\\CrudMenu;",
+                        "",
+                        "use Lle\\CruditBundle\\Contracts\\MenuProviderInterface;",
+                        "use Lle\\CruditBundle\\Dto\\Layout\\LinkElement;",
+                        "use Lle\\CruditBundle\\Dto\\Path;",
+
+                        "class AppMenuProvider implements MenuProviderInterface",
+                        "{",
+                        "  public function getMenuEntry(): array",
+                        "  {",
+                        "     $items = [",
+                        "       LinkElement::new(",
+                        "        \"menu.dashboard\",",
+                        "        Path::new(\"home\")",
+                        "      )",
+                        "     ];",
+                        "     return $items;",
+                        "  }",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "a224aa89b2b5e36cdbc954f83a4c77e5a5b6b43b"
+        }
+    }
+}
