@@ -13,7 +13,7 @@
             "1.4",
             "1.5"
         ],
-        "2lenet/client-oauth-bundle": [
+        "2lenet/oauth-client-bundle": [
             "3.0"
         ]
     },
