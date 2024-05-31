@@ -48,6 +48,7 @@
                 },
                 ".env": {
                     "contents": [
+                        "",
                         "###> 2lenet/oauth-client-bundle",
                         "OAUTH_PUBLIC_URL=",
                         "OAUTH_API_URL=",
@@ -59,7 +60,7 @@
                     "executable": false
                 }
             },
-            "ref": "1aa4a880b229da122f55569db0194d5036d60e3f"
+            "ref": "f0b2849071865469ff79ab34e5ba248e70ade647"
         }
     }
 }
