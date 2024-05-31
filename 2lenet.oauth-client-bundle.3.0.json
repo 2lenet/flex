@@ -11,10 +11,10 @@
                     "config/": "%CONFIG_DIR%/"
                 },
                 "env": {
-                    "#1": "OAUTH_PUBLIC_URL=",
-                    "#2": "OAUTH_API_URL=",
-                    "#3": "OAUTH_CLIENT_ID=",
-                    "#4": "OAUTH_CLIENT_SECRET="
+                    "OAUTH_PUBLIC_URL": "",
+                    "OAUTH_API_URL": "",
+                    "OAUTH_CLIENT_ID": "",
+                    "OAUTH_CLIENT_SECRET": ""
                 },
                 "post-install-output": [
                     "Follow Connect's documentation to finish the installation of the OAuth2 Client"
