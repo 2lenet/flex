@@ -1,0 +1,65 @@
+{
+    "manifests": {
+        "2lenet/oauth-client-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Lle\\OAuthClientBundle\\OAuthClientBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "Follow Connect's documentation to finish the installation of the OAuth2 Client"
+                ]
+            },
+            "files": {
+                "config/packages/lle_oauth2_client.yaml": {
+                    "contents": [
+                        "lle_oauth_client:",
+                        "    domain: '%env(OAUTH_PUBLIC_URL)%'",
+                        "    apiconnect: '%env(OAUTH_API_URL)%'",
+                        "    client_id: '%env(OAUTH_CLIENT_ID)%'",
+                        "    client_secret: '%env(OAUTH_CLIENT_SECRET)%'",
+                        "    class_user: 'App\Entity\User'",
+                        "    header_token_name: 'Authorization'",
+                        "    token_name: 'token'",
+                        "    token_name_field: 'token'",
+                        "    key_field: 'idConnect'",
+                        "    token_type: ~",
+                        "    redirect_route: 'login_check'",
+
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/routes.yaml": {
+                    "contents": [
+                        "lle_oauth_client:",
+                        "    resource: \"@OAuthClientBundle/Resources/config/routes.yaml\"",
+                        "    prefix: /",
+                        "logout:",
+                        "    path: /logout",
+
+                        ""
+                    ],
+                    "executable": false
+                },
+                ".env": {
+                    "contents": [
+                        "###> 2lenet/oauth-client-bundle",
+                        "OAUTH_PUBLIC_URL=",
+                        "OAUTH_API_URL=",
+                        "OAUTH_CLIENT_ID=",
+                        "OAUTH_CLIENT_SECRET=",
+                        "###< 2lenet/oauth-client-bundle",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "b86e08edc25365da6057199ec0dee4f7f3d7adc3"
+        }
+    }
+}
