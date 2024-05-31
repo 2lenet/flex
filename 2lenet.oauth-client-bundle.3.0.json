@@ -34,7 +34,7 @@
                     ],
                     "executable": false
                 },
-                "config/routes/routes.yaml": {
+                "config/routes/lle_oauth2_client.yaml": {
                     "contents": [
                         "lle_oauth_client:",
                         "    resource: \"@OAuthClientBundle/Resources/config/routes.yaml\"",
@@ -59,7 +59,7 @@
                     "executable": false
                 }
             },
-            "ref": "1034fcb59b3afd6b481924746c19e6e8243526f3"
+            "ref": "1aa4a880b229da122f55569db0194d5036d60e3f"
         }
     }
 }
