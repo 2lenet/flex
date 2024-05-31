@@ -15,7 +15,7 @@
         ],
         "2lenet/cient-oauth-bundle": [
             "3.0"
-        ],
+        ]
     },
     "branch": "master",
     "is_contrib": false,
