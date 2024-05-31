@@ -22,7 +22,7 @@
                         "    apiconnect: '%env(OAUTH_API_URL)%'",
                         "    client_id: '%env(OAUTH_CLIENT_ID)%'",
                         "    client_secret: '%env(OAUTH_CLIENT_SECRET)%'",
-                        "    class_user: 'App\Entity\User'",
+                        "    class_user: 'App\\Entity\\User'",
                         "    header_token_name: 'Authorization'",
                         "    token_name: 'token'",
                         "    token_name_field: 'token'",
