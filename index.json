@@ -12,7 +12,10 @@
         "2lenet/hermes-bundle": [
             "1.4",
             "1.5"
-        ]
+        ],
+        "2lenet/cient-oauth-bundle": [
+            "3.0"
+        ],
     },
     "branch": "master",
     "is_contrib": false,
