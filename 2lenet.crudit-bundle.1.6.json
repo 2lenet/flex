@@ -76,13 +76,12 @@
                         "{",
                         "  public function getMenuEntry(): array",
                         "  {",
-                        "     $items = [",
-                        "       LinkElement::new(",
-                        "        \"menu.dashboard\",",
-                        "        Path::new(\"home\")",
-                        "      )",
-                        "     ];",
-                        "     return $items;",
+                        "      return [",
+                        "          LinkElement::new(",
+                        "              'menu.dashboard',",
+                        "              Path::new('home')",
+                        "          ),",
+                        "      ];",
                         "  }",
                         "}",
                         ""
@@ -90,7 +89,7 @@
                     "executable": false
                 }
             },
-            "ref": "a224aa89b2b5e36cdbc954f83a4c77e5a5b6b43b"
+            "ref": "a0d942329836184036307ece6436750d43c0d52f"
         }
     }
 }
