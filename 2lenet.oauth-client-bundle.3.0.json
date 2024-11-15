@@ -14,7 +14,9 @@
                     "OAUTH_PUBLIC_URL": "",
                     "OAUTH_API_URL": "",
                     "OAUTH_CLIENT_ID": "",
-                    "OAUTH_CLIENT_SECRET": ""
+                    "OAUTH_CLIENT_SECRET": "",
+                    "OAUTHAPI_USERNAME": "",
+                    "OAUTHAPI_PASSWORD": ""
                 },
                 "post-install-output": [
                     "Follow Connect's documentation to finish the installation of the OAuth2 Client"
@@ -53,7 +55,7 @@
                     "executable": false
                 }
             },
-            "ref": "cdef8e09fcb3c3cae077d04d01a13b252d58420d"
+            "ref": "ef67bcffab4eb3b41fcb467502696388b40c12d8"
         }
     }
 }
