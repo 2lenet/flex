@@ -1,0 +1,56 @@
+{
+    "manifests": {
+        "2lenet/oauth-client-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Lle\\OAuthClientBundle\\OAuthClientBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "OAUTH_PUBLIC_URL": "",
+                    "OAUTH_API_URL": "",
+                    "OAUTH_CLIENT_ID": "",
+                    "OAUTH_CLIENT_SECRET": "",
+                    "OAUTH_API_USERNAME": "",
+                    "OAUTH_API_PASSWORD": ""
+                },
+                "post-install-output": [
+                    "Follow Connect's documentation to finish the installation of the OAuth2 Client"
+                ]
+            },
+            "files": {
+                "config/packages/lle_oauth2_client.yaml": {
+                    "contents": [
+                        "lle_oauth_client:",
+                        "    domain: '%env(OAUTH_PUBLIC_URL)%'",
+                        "    apiconnect: '%env(OAUTH_API_URL)%'",
+                        "    client_id: '%env(OAUTH_CLIENT_ID)%'",
+                        "    client_secret: '%env(OAUTH_CLIENT_SECRET)%'",
+                        "    api_user: '%env(OAUTH_API_USERNAME)%'",
+                        "    api_password: '%env(OAUTH_API_PASSWORD)%'",
+                        "    redirect_route: 'login_check'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/lle_oauth2_client.yaml": {
+                    "contents": [
+                        "lle_oauth_client:",
+                        "    resource: \"@OAuthClientBundle/Resources/config/routes.yaml\"",
+                        "    prefix: /",
+                        "logout:",
+                        "    path: /logout",
+
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "ef67bcffab4eb3b41fcb467502696388b40c12d8"
+        }
+    }
+}
