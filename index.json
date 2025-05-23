@@ -14,7 +14,8 @@
             "1.5"
         ],
         "2lenet/oauth-client-bundle": [
-            "3.0"
+            "3.0",
+            "3.0.2"
         ]
     },
     "branch": "master",
