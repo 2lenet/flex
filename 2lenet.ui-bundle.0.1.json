@@ -1,0 +1,37 @@
+{
+    "manifests": {
+        "2lenet/ui-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Lle\\UiBundle\\LleUiBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  * UiBundle install:",
+                    "    The stylesheet is NOT loaded by the Stimulus controllers: link it in your layout.",
+                    "    1. AssetMapper: <link rel=\"stylesheet\" href=\"{{ asset('@2lenet/ui-bundle/ui.css') }}\">",
+                    "       Encore: import '@2lenet/ui-bundle/dist/ui.css'; in your entry point (assets/app.js).",
+                    "    2. Run npm install (Encore only: the package is added to package.json).",
+                    "    3. Project created before Stimulus: see the UiBundle docs (installation) for assets/controllers.json",
+                    "       and enableStimulusBridge()."
+                ]
+            },
+            "files": {
+                "config/packages/lle_ui.yaml": {
+                    "contents": [
+                        "lle_ui:",
+                        "    icons:",
+                        "        load_fontawesome: true",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "0000000000000000000000000000000000000000"
+        }
+    }
+}
