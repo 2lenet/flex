@@ -1,0 +1,38 @@
+{
+    "manifests": {
+        "2lenet/crudit-ui-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Lle\\CruditUiBundle\\LleCruditUiBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  * CruditUiBundle install:",
+                    "    The stylesheet is NOT loaded by the Stimulus controllers: link it in your layout.",
+                    "    1. AssetMapper: <link rel=\"stylesheet\" href=\"{{ asset('@2lenet/crudit-ui-bundle/ui.css') }}\">",
+                    "       Encore: import '@2lenet/crudit-ui-bundle/dist/ui.css'; in your entry point (assets/app.js).",
+                    "    2. Encore only: run npm install (the package is added to package.json), then rebuild.",
+                    "    3. Run bin/console cache:clear: a controllers.json created or changed is not seen before.",
+                    "    4. Project created before Stimulus: see the CruditUiBundle docs (installation) for assets/controllers.json",
+                    "       and enableStimulusBridge()."
+                ]
+            },
+            "files": {
+                "config/packages/lle_crudit_ui.yaml": {
+                    "contents": [
+                        "lle_crudit_ui:",
+                        "    icons:",
+                        "        load_fontawesome: true",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "0000000000000000000000000000000000000000"
+        }
+    }
+}
