@@ -1,0 +1,58 @@
+{
+    "manifests": {
+        "2lenet/entity-file-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Lle\\EntityFileBundle\\LleEntityFileBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  * EntityFileBundle install:",
+                    "    1. Declare your configurations in config/packages/lle_entity_file.yaml (one per entity and file system).",
+                    "    2. Generate and run a migration: the bundle adds the lle_entity_file table.",
+                    "    4. Make sure access_control in config/packages/security.yaml contains: { path: ^/lle-entity-file, methods: [POST, DELETE], role: ROLE_USER }. Reading is controlled by the role key of each configuration.",
+                    "    4. By default only ROLE_USER can read the files; change it with the role key of a configuration.",
+                    "    5. Uploads can be restricted with the mime_types key of a configuration."
+                ]
+            },
+            "files": {
+                "config/packages/lle_entity_file.yaml": {
+                    "contents": [
+                        "lle_entity_file:",
+                        "    configurations: {}",
+                        "#        seller_logos:",
+                        "#            class: 'App\\Entity\\Seller'",
+                        "#            storage_adapter: 'lle_entity_file.storage.default'",
+                        "#            role: 'ROLE_USER'",
+                        "#            disposition: 'inline'",
+                        "#            mime_types: ['image/jpeg', 'image/png', 'image/webp']",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/lle_entity_file.yaml": {
+                    "contents": [
+                        "lle_entity_file:",
+                        "    resource: '@LleEntityFileBundle/Resources/config/routes.yaml'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/security.yaml": {
+                    "contents": [
+                        "security:",
+                        "    access_control:",
+                        "        - { path: ^/lle-entity-file, methods: [POST, DELETE], role: ROLE_USER }",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "8d3b5f0e7a1c4296b0e5d7f3a9c2e41b6f08d5a7"
+        }
+    }
+}
