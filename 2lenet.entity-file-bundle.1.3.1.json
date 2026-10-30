@@ -14,9 +14,8 @@
                     "  * EntityFileBundle install:",
                     "    1. Declare your configurations in config/packages/lle_entity_file.yaml (one per entity and file system).",
                     "    2. Generate and run a migration: the bundle adds the lle_entity_file table.",
-                    "    3. Make sure access_control in config/packages/security.yaml contains: { path: ^/lle-entity-file, methods: [POST, DELETE], role: ROLE_USER }. Reading, uploading and deleting are controlled by the role, role_write and role_delete keys of each configuration.",
-                    "    4. By default only ROLE_USER can read, upload and delete the files; change it with the role, role_write and role_delete keys of a configuration.",
-                    "    5. By default only jpeg, png, webp and pdf files are accepted; change it with the mime_types key of a configuration."
+                    "    3. By default only ROLE_USER can read, upload and delete the files; change it with the role, role_write and role_delete keys of a configuration.",
+                    "    4. By default only jpeg, png, webp and pdf files are accepted; change it with the mime_types key of a configuration."
                 ]
             },
             "files": {
@@ -40,15 +39,6 @@
                     "contents": [
                         "lle_entity_file:",
                         "    resource: '@LleEntityFileBundle/Resources/config/routes.yaml'",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "config/packages/security.yaml": {
-                    "contents": [
-                        "security:",
-                        "    access_control:",
-                        "        - { path: ^/lle-entity-file, methods: [POST, DELETE], role: ROLE_USER }",
                         ""
                     ],
                     "executable": false
